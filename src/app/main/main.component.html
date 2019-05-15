@@ -1,0 +1,16 @@
+<div
+  class="main"
+  fxLayout="row"
+  fxLayoutAlign="center center"
+  [style.background-color]="bgColor"
+>
+  <img
+    [src]="imageToShow"
+    alt="Place image title"
+    id="main-image"
+    *ngIf="!isImageLoading else noImageFound;"
+  />
+  <ng-template #noImageFound>
+    not found
+  </ng-template>
+</div>
